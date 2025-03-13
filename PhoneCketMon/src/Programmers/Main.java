@@ -9,7 +9,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		var reader = new BufferedReader(new InputStreamReader(System.in));
-		int N= Integer.parseInt(reader.readLine());
+		int N= 100000;
 		String input = reader.readLine();
 		input = input.substring(1, input.length() - 1);
 
