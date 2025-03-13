@@ -2,8 +2,8 @@ package Programmers;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Main {
 
@@ -28,18 +28,18 @@ public class Main {
 class Solution {
 	public int solution(int[] nums) {
 		int answer = 0;
-		int N = nums.length;
-		Map<Integer, Integer> map1 = new HashMap<>();
+		Set<Integer> set1 = new HashSet<>();
+		
 		for (int num : nums) {
-			map1.put(num, map1.getOrDefault(num, 0) + 1);
+			set1.add(num);
 		}
-
-		int keyCount = map1.keySet().size();
-
-		if ((N / 2) > keyCount) {
+		
+		int keyCount=set1.size();
+		
+		if ((nums.length / 2) > keyCount) {
 			answer = keyCount;
 		} else {
-			answer = N / 2;
+			answer = nums.length / 2;
 		}
 		return answer;
 	}
