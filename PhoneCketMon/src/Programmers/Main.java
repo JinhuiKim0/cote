@@ -9,13 +9,13 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		var reader = new BufferedReader(new InputStreamReader(System.in));
-		int N= 100000; // 최대 범위까지 설정
+		
 		String input = reader.readLine();
 		input = input.substring(1, input.length() - 1);
 
 		String[] inputArray = input.split(","); // "," 제거
-		int[] nums = new int[N];
-		for (int i = 0; i < N; i++) {
+		int[] nums = new int[inputArray.length];
+		for (int i = 0; i <inputArray.length; i++) {
 			nums[i] = Integer.parseInt(inputArray[i]);
 		}
 
