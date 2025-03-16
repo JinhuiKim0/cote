@@ -11,7 +11,7 @@ public class Main {
 		String input = reader.readLine();
 		Set<String> set = new HashSet<>();
 		for (int j = 0; j < input.length() - 1; j++) {
-			for (int i = 1; i < input.length(); i++) {
+			for (int i = j; i < input.length(); i++) {
 				set.add(input.substring(j, i));
 			}
 		}
