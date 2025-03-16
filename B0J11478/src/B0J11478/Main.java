@@ -8,19 +8,13 @@ import java.util.Set;
 public class Main {
 	public static void main(String[] args) throws Exception {
 		var reader = new BufferedReader(new InputStreamReader(System.in));
-		String input = reader.readLine(); 
-		Solution solution=new Solution();
-		System.out.print(solution.solution(input));
-	}
-}
-class Solution {
-	public int solution(String s) {
-		int answer=0;
-		Set<String> set= new HashSet<>();
-		for(int i=1;i<s.length();i++) {
-			set.add(s.substring(0,i));
+		String input = reader.readLine();
+		Set<String> set = new HashSet<>();
+		for (int j = 0; j < input.length() - 1; j++) {
+			for (int i = 1; i < input.length(); i++) {
+				set.add(input.substring(j, i));
+			}
 		}
-		answer=set.size();
-		return answer;
+		System.out.print(set.size());
 	}
 }
