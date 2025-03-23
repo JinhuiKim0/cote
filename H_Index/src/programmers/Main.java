@@ -11,9 +11,7 @@ public class Main {
 		int[] citations=new int[str.length];
 		for(int i=0;i<str.length;i++) {
 			citations[i]=Integer.parseInt(str[i].trim()); // String ->Integer 형변환
-			System.out.print(citations[i]);
 		}
-		System.out.println();
 		Solution solution=new Solution();
 		System.out.print(solution.solution(citations));
 	}
