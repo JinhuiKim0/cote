@@ -10,7 +10,7 @@ import java.util.Collections;
 class Solution {
  public int[] solution(int k, int[] score) {
      int[] result = new int[k+1] {};
-     int[] answer=new int[k] {};
+     int[] answer=new int[score.length] {};
      result[0]= score[0];
      answer[0]=score[0];
      for(int i=1;i<score.length;i++){
