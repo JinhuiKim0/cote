@@ -27,7 +27,7 @@ public class Main {
 		Solution solution=new Solution();
 		String[] st = solution.solution(n, arr1, arr2);
 		for(String stt:st) {
-			System.out.print(stt+" ");
+			System.out.print(stt+",");
 		}
 		System.out.println();
 	}
