@@ -22,12 +22,12 @@ public class Main {
 		str=input.trim().split(","); // arr2
 		
 		for(int i=0;i<n;i++) {
-			arr1[2]=Integer.parseInt(str[i].trim());
+			arr2[i]=Integer.parseInt(str[i].trim());
 		}
 		Solution solution=new Solution();
 		String[] st = solution.solution(n, arr1, arr2);
-		for(String stt:st) {
-			System.out.print(stt+",");
+		for(int i=0;i<st.length;i++) {
+			System.out.print(st[i]+",");
 		}
 		// 배열 출력해보기
 		for(int i=0;i<n;i++) {
