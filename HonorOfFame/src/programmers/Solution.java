@@ -10,24 +10,20 @@ import java.util.*;
 class Solution {
     public int[] solution(int k, int[] score) {
         int[] answer = new int[score.length];  // 결과를 저장할 배열
-        // 우선순위 큐(최소 힙)를 사용하여 상위 k개의 점수만 유지
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        PriorityQueue<Integer> pq = new PriorityQueue<>();  // 최소 힙을 이용하여 상위 k개의 점수 추적
         
         for (int i = 0; i < score.length; i++) {
-            pq.add(score[i]);  // 새로운 점수를 큐에 추가
+            pq.add(score[i]);  // 새로운 점수를 추가
             
-            if (pq.size() > k) {  // 큐의 크기가 k보다 크면, 가장 작은 값을 제거
+            // 힙의 크기가 k보다 커지면, 가장 작은 점수를 제거
+            if (pq.size() > k) {
                 pq.poll();
             }
             
-            // 큐의 크기가 k 미만일 때는 아직 k번째 순위가 없으므로, 가장 큰 값으로 채운다.
-            if (pq.size() < k) {
-                answer[i] = Collections.max(pq);  // 최대값을 넣는다
-            } else {
-                // 큐의 가장 작은 값이 k번째 순위
-                answer[i] = pq.peek();  // PriorityQueue의 맨 앞이 k번째 순위
-            }
+            // k개 이하일 때는 최소 힙의 가장 작은 값이 k번째 큰 점수
+            answer[i] = pq.peek();
         }
+        
         return answer;
     }
 }
