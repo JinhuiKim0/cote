@@ -15,14 +15,14 @@ public class Main {
 		int[] arr2=new int[n];
 		
 		for(int i=0;i<n;i++) {
-			arr1[i]=Integer.parseInt(str[i]);
+			arr1[i]=Integer.parseInt(str[i].trim());
 		}
 		
 		input=reader.readLine();
 		str=input.trim().split(","); // arr2
 		
 		for(int i=0;i<n;i++) {
-			arr1[2]=Integer.parseInt(str[i]);
+			arr1[2]=Integer.parseInt(str[i].trim());
 		}
 		Solution solution=new Solution();
 		String[] st = solution.solution(n, arr1, arr2);
