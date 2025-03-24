@@ -2,7 +2,7 @@ package programmers;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+// arr2가 0이 들어가는 것을 확인
 public class Main {
 	public static void main(String[] args)throws Exception{
 		var reader=new BufferedReader(new InputStreamReader(System.in));
@@ -28,6 +28,11 @@ public class Main {
 		String[] st = solution.solution(n, arr1, arr2);
 		for(String stt:st) {
 			System.out.print(stt+",");
+		}
+		// 배열 출력해보기
+		for(int i=0;i<n;i++) {
+			System.out.println("arr1["+i+"] = "+arr1[i]);
+			System.out.println("arr2["+i+"] = "+arr2[i]);
 		}
 		System.out.println();
 	}
