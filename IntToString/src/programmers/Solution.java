@@ -8,8 +8,8 @@ package programmers;
 class Solution {
  public int solution(String s) {
      int answer = 0;
-     String c = s.charAt(0);
-     if(c.equal("-")){
+     
+     if(s.charAt(0)=="-"){
          answer=0-Integer.parseInt(s.substring(1,s.length()));
      }else{
          answer=Integer.parseInt(s.substring(1,s.length()));
