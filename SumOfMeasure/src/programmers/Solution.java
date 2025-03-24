@@ -7,7 +7,7 @@ class Solution {
  public int solution(int n) {
      int answer = 0;
      int value=0;
-     for(int i=1;i<=Math.sqrt(n);i++){
+     for(int i=1;i<=(int)Math.sqrt(n);i++){
          value=n%i;
          if(value){
              if(value!=(n/i)){
