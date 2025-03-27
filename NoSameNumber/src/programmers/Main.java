@@ -1,0 +1,24 @@
+package programmers;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Main {
+
+	public static void main(String[] args)throws Exception {
+		var reader=new BufferedReader(new InputStreamReader(System.in));
+		String[] input=reader.readLine().split(",");
+		int[] arr=new int[input.length];
+		for(int i=0;i<arr.length;i++) {
+			arr[i]=Integer.parseInt(input[i].trim());
+		}
+		
+		Solution sol=new Solution();
+		int[] result=sol.solution(arr);
+		for(int r:result) {
+			System.out.print(r+" ");
+		}
+		
+	}
+
+}
