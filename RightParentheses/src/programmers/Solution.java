@@ -14,11 +14,8 @@ class Solution {
 				if (stack.isEmpty()) {
 					return false; // 바로 끝낼 수 있도록 함.
 				} else {
-					String sr = stack.pop();
-					if (sr.equals("(")) {}
-					else {
+					if (stack.pop().equals("(")==false) 
 						return false;
-					}
 				}
 
 			}
