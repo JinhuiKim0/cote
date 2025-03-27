@@ -45,12 +45,14 @@ public class Solution {
 		// 앞의 Integer은 순서를 얘기해줌. 뒤의 Integer은 GetOfDefault을 1로 하여 기본은 1이고 중복되어나오면 수가 증가
 		Map<Integer,Integer> map=new HashMap<>(); 
 		for(int i=1;i<=queue.size();i++) {
-			map.put(i, map.getOrDefault(i, 0)+1);
+			map.put(queue.remove(), map.getOrDefault(queue.remove(), 0)+1);
 		}
 		int[] answer=new int[map.size()];
-		// map에 있는 내용을 answer배열에 담기
-		for(int i=1;i<=map.size();i++) {
-			answer[i-1]=map.get(i);
+		int j=0;
+		// map을 순회하여 answer배열에 담기
+		for(int k:map.keySet()) {
+			answer[j]=k;
+			j++;
 		}
 		return answer;
 	}

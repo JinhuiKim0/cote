@@ -28,7 +28,7 @@ public class Main {
 		Solution sol=new Solution();
 		int[] result=sol.solution(progresses, speeds);
 		for(int i=0;i<result.length;i++) {
-			System.out.print(result[i]); 
+			System.out.print(result[i]+" "); 
 		}
 	}
 }
