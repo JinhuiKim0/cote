@@ -13,18 +13,22 @@ class Solution {
 				stack.push("(");
 			} else if (str[i].equals(")")) {
 				if (stack.isEmpty()) {
-					answer = false;
+					return false; // 바로 끝낼 수 있도록 함.
 				} else {
 					String sr = stack.pop();
 					if (sr.equals("(")) {
-						answer = true;
+						break;
 					} else {
-						answer = false;
+						return false;
 					}
 				}
 
 			}
+			if(stack.isEmpty()) {
+				return true;
+			}else {
+				return false;
+			}
 		}
-		return answer;
 	}
 }
