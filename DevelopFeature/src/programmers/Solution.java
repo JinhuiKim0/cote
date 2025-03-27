@@ -51,8 +51,7 @@ public class Solution {
 		int j=0;
 		// map을 순회하여 answer배열에 담기
 		for(int k:map.keySet()) {
-			answer[j]=k;
-			j++;
+			answer[j++]=map.get(k);
 		}
 		return answer;
 	}
