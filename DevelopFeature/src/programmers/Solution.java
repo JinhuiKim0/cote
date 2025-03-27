@@ -26,7 +26,7 @@ class Solution {
         		count++;
         	}else { // Max보다 큰 경우
         		Max=number;
-        		answer.addLast(count);
+        		answer.add(count);
         	}
         }
         return answer;
