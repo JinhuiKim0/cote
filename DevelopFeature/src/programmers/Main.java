@@ -17,14 +17,6 @@ public class Main {
 		for(int i=0;i<inp.length;i++) {
 			speeds[i]=Integer.parseInt(inp[i].trim());
 		}
-		for(int i:progresses) {
-			System.out.print(i+" ");
-		}
-		System.out.println();
-		for(int i:speeds) {
-			System.out.print(i+" ");
-		}
-		System.out.println();
 		Solution sol=new Solution();
 		int[] result=sol.solution(progresses, speeds);
 		for(int i=0;i<result.length;i++) {
