@@ -2,7 +2,6 @@ package programmers;
 
 class Solution {
 	public String solution(String new_id) {
-		String answer = "";
 		// 1번 소문자로 바꾸기
 		String ID = new_id.toLowerCase();
 		// 2번 알파벳 소문자, 숫자, 빼기(-), 밑줄(_), 마침표(.)를 제외한 모든 문자 제거
