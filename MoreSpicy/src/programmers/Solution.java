@@ -9,7 +9,7 @@ class Solution {
         for(int i:scoville) {
         	pq.add(i);
         }
-        for(int i=0;i<scoville.length-1;i++) {
+        for(int i=0;i<scoville.length;i++) {
         	if(pq.peek()>=K) { // 최소힙이 K와 같으면 중단.
         		break;
         	}else { // K보다 작은경우
@@ -20,7 +20,7 @@ class Solution {
         	}
         }
         if(answer==0) {
-        	answer=-1;
+        	return -1;
         }
         return answer;
     }
