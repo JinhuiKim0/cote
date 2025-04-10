@@ -9,19 +9,13 @@ class Solution {
         for(int i:scoville) {
         	pq.add(i);
         }
-        for(int i=0;i<scoville.length;i++) {
-        	if(pq.peek()>=K) { // 최소힙이 K와 같으면 중단.
-        		break;
-        	}else { // K보다 작은경우
-        		int first=pq.poll();
-        		int second=pq.poll();
-        		pq.add(first+(second*2));
-        		answer++;
-        	}
+        while(pq.size()>1 && pq.peek()<K) {
+        	int first=pq.poll();
+        	int second=pq.poll();
+        	int sum=first+(second*2);
+        	pq.add(sum);
+        	answer++;
         }
-        if(answer==0) {
-        	return -1;
-        }
-        return answer;
+        return (pq.peek()>=K)?answer:-1;
     }
 }
